@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Author"
+    }
+  },
+  "defaultProject": "Author",
+  "cli": {
+    "analytics": false
+  }
 }
