@@ -1,5 +1,7 @@
-<div class="col-md-5">
-  <app-item></app-item>
+<div class="container">
+  <div *ngFor="let authors of authorList">
+    <app-item [author]="authors"></app-item>
+  </div>
 </div>
 
 <div class="col-md-12 mt-5">

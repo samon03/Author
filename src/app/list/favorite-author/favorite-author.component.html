@@ -1,5 +1,5 @@
-<div class="col-md-5">
-  <app-fav-item></app-fav-item>
+<div class="col-md-10" *ngFor="let favs of favList">
+  <app-fav-item [fav]="favs"></app-fav-item>
 </div>
 
 <div class="col-md-12 mt-5">
