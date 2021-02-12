@@ -7,11 +7,13 @@
 <div class="col-md-12 mt-5">
   <div class="card">
     <div class="card-body text-center">
-        <a>
-          <i class="fa fa-arrow-circle-left mr-3"></i>
-          Page 2
-          <i class="fa fa-arrow-circle-right ml-3"></i>
-        </a>
+        <button  type="button" (click)="prev()">
+          <i class="fa fa-arrow-circle-left p-1"></i>
+        </button>
+          Page {{currentPage}}
+          <button type="button" (click)="next()">
+          <i class="fa fa-arrow-circle-right p-1"></i>
+          </button>
     </div>
   </div>
 </div>

@@ -8,12 +8,22 @@ import { Observable } from 'rxjs';
 })
 export class AuthorService {
 
-  readonly baseUrl = "http://localhost:3000/authors";
+  take: number = 5;
+  skip: number = 0;
+  baseUrl = `https://api.quotable.io/authors?limit=${this.take}&skip=${this.skip}`;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient) { }
 
-  getAuthors(): Observable<Author[]> {
-    return this.http.get<Author[]>(this.baseUrl);
+  // getAuthors(): Observable<Author[]> {
+  //   return this.http.get<Author[]>(this.baseUrl);
+  // }
+
+  getAuthors(take: number, skip: number): Observable<Response[]> {
+    debugger;
+    this.take = take;
+    this.skip = skip;
+    return this.http.get<Response[]>(`https://api.quotable.io/authors?limit=${this.take}&skip=${this.skip}`);
   }
 
 }
