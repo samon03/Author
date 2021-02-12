@@ -27,7 +27,6 @@ export class ListItemComponent implements OnInit {
   }
 
   loadAuthors() {
-    //debugger;
      this.authorService.getAuthors(this.take, this.const * this.take).subscribe(
       response => {
 
@@ -63,7 +62,6 @@ export class ListItemComponent implements OnInit {
   }
 
   next(){
-    // debugger;
     this.authorList = [];
     this.const += 1;
     this.currentPage += 1;

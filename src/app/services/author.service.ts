@@ -12,18 +12,19 @@ export class AuthorService {
   skip: number = 0;
   baseUrl = `https://api.quotable.io/authors?limit=${this.take}&skip=${this.skip}`;
 
+  authorUrl = "https://api.quotable.io/authors/";
+
   constructor(
     private http: HttpClient) { }
 
-  // getAuthors(): Observable<Author[]> {
-  //   return this.http.get<Author[]>(this.baseUrl);
-  // }
-
   getAuthors(take: number, skip: number): Observable<Response[]> {
-    debugger;
     this.take = take;
     this.skip = skip;
     return this.http.get<Response[]>(`https://api.quotable.io/authors?limit=${this.take}&skip=${this.skip}`);
+  }
+
+  deleteFavorite(_id: string): Observable<Author[]>{
+    return this.http.delete<Author[]>(`https://api.quotable.io/authors/${_id}`);
   }
 
 }

@@ -20,4 +20,8 @@ export class FavoriteService {
   postFavorite(favorite: Favorite): Observable<Favorite[]> {
     return this.http.post<Favorite[]>(this.favUrl, favorite);
   }
+
+  deleteFavorite(_id: any): Observable<Favorite[]>{
+    return this.http.delete<Favorite[]>(this.favUrl + `/${_id}`);
+  }
 }

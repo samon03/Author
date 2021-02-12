@@ -1,8 +1,8 @@
 <div class="mb-3">
   <div class="card p-2">
     <div class="card-body">
-      <button class="btn btn-success btn-sm btn-style" (click)="addFavorite()">Favorite</button>
-      <!-- <button class="btn btn-danger btn-sm btn-style">Remove Favorite</button> -->
+      <button *ngIf="!wish" class="btn btn-success btn-sm btn-style" (click)="addFavorite()">Add Favorite</button>
+      <button *ngIf="wish" class="btn btn-danger btn-sm btn-style" (click)="removeFavorite(author._id)">Remove Favorite</button>
       <h5 class="card-title">{{ author.name }}</h5>
       <h6 class="card-subtitle mb-2 text-muted">
         {{ author.bio }}

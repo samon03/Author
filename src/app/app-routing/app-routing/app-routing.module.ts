@@ -6,6 +6,7 @@ import { FavoriteAuthorComponent } from 'src/app/list/favorite-author/favorite-a
 const routes: Routes = [
   { path: 'author', component: ListItemComponent },
   { path: 'favorite', component:  FavoriteAuthorComponent},
+  { path: 'favorite/:_id', component: FavoriteAuthorComponent },
   { path: '', component: ListItemComponent }
 ];
 

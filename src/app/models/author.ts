@@ -5,7 +5,4 @@ export class Author {
   link: string;
   quoteCount: number;
 
-  // constructor(_id: _id, name: name, bia: bio, ) {
-
-  // }
 }

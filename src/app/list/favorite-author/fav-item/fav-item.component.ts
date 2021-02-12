@@ -11,14 +11,15 @@ export class FavItemComponent implements OnInit {
 
   @Input() fav: Favorite;
 
+
   constructor(private favoriteService: FavoriteService) { }
 
   ngOnInit(): void {
-    this.loadFavorites();
+
   }
 
-  loadFavorites() {
-    this.favoriteService.getFavorite().subscribe();
+  onDelete(_id: any) {
+    this.favoriteService.deleteFavorite(_id).subscribe();
   }
 
 }
