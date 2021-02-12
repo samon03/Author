@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing/app-routing/app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,6 +9,7 @@ import { ListItemComponent } from './list/list-item/list-item.component';
 import { FavoriteAuthorComponent } from './list/favorite-author/favorite-author.component';
 import { ItemComponent } from './list/list-item/item/item.component';
 import { FavItemComponent } from './list/favorite-author/fav-item/fav-item.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { FavItemComponent } from './list/favorite-author/fav-item/fav-item.compo
     FavItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
