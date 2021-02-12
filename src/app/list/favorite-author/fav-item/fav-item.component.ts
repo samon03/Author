@@ -10,16 +10,23 @@ import { Favorite } from 'src/app/models/favorite';
 export class FavItemComponent implements OnInit {
 
   @Input() fav: Favorite;
+  favoriteObject = null;
 
 
   constructor(private favoriteService: FavoriteService) { }
 
   ngOnInit(): void {
-
+    this.favoriteObject = this.fav;
   }
 
+  // loadFavAuthors() {
+  //   this.favoriteService.getFavorite().subscribe();
+  // }
+
   onDelete(_id: any) {
-    this.favoriteService.deleteFavorite(_id).subscribe();
+    this.favoriteService.deleteFavorite(_id).subscribe(fav => {
+      location.reload(true);
+    });
   }
 
 }

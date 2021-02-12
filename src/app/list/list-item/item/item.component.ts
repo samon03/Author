@@ -21,6 +21,7 @@ export class ItemComponent implements OnInit {
   }
 
   addFavorite() {
+    debugger;
     this.favoriteService.postFavorite(this.author).subscribe(fav => {
       this.wish = true;
     });
